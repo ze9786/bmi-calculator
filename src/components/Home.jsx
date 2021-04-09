@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Breadcrumb, BreadcrumbItem, Col, Row, Input, Button } from 'reactstrap';
-import ReactDOM from "react-dom";
+
 
 class Home extends Component {
     constructor() {
@@ -30,7 +29,7 @@ class Home extends Component {
     }
     calculateBMI(){
         if(this.state.weight && this.state.height)
-        var bmi=this.state.weight/(this.state.height*this.state.height);
+        var bmi=(this.state.weight/(this.state.height*this.state.height)).toFixed(2);
         return bmi;
     }
     getBMIResults(bmi){
